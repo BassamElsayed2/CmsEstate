@@ -65,10 +65,12 @@ const HeroArea = () => {
         <div className="container">
           <div className="row justify-content-center z-index-3">
             <div className="col-xl-11">
-              <div className="tp-hero-title-box text-center">
+              <div className="tp-hero-title-box text-center clamb-2">
                 <h2 className="tp-hero-title-3 hero-text-anim pb-5">
                   <i>
-                    <i className="child-1">{heroData?.headerTitle?.[locale]}</i>
+                    <i className="child-1 ">
+                      {heroData?.headerTitle?.[locale]}
+                    </i>
                   </i>
                 </h2>
                 <p

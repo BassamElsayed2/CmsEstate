@@ -7,7 +7,14 @@ import { useRouter } from "next/router";
 const MobileMenus = ({ menuData }) => {
   const [navTitle, setNavTitle] = useState("");
 
-  const { locale } = useRouter();
+  const router = useRouter();
+
+  const { locale , pathname, query } = router;
+
+  const toggleLanguage = () => {
+    const newLocale = locale === "en" ? "ar" : "en";
+    router.push({ pathname, query }, undefined, { locale: newLocale });
+  };
 
   //openMobileMenu
   const openMobileMenu = (menu) => {
@@ -54,9 +61,17 @@ const MobileMenus = ({ menuData }) => {
                   <Link href={menu.url}>{menu.title?.[locale]}</Link>
                 </li>
               )}
+            
             </React.Fragment>
           ))}
         </ul>
+        <button
+          onClick={toggleLanguage}
+          className="tp-btn-blue-sm tp-btn-hover alt-color-black tb-toggle"
+          
+        >
+          {locale === "en" ? "العربية" : "English"}
+        </button>
       </nav>
     </>
   );
