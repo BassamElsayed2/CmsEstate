@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 import { client } from "@/src/sanity/lib/client";
 
 import { urlFor } from "@/src/sanity/lib/image";
-import { serviceFetch } from "@/src/sanity/lib/queries";
+// import { serviceFetch } from "@/src/sanity/lib/queries";
 
 const service_content = {
   title: (
@@ -31,23 +31,23 @@ const { title, btn_text, bg_img, service_title, service_info } =
   service_content;
 
 const ServiceArea = () => {
-  const [serviceData, setServiceData] = useState(null);
+  // const [serviceData, setServiceData] = useState(null);
 
-  const { locale } = useRouter();
+  // const { locale } = useRouter();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const query = serviceFetch;
-      const data = await client.fetch(query);
-      setServiceData(data);
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const query = serviceFetch;
+  //     const data = await client.fetch(query);
+  //     setServiceData(data);
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   return (
     <>
-      <div className="tp-service-area pb-90 z-index">
+      {/* <div className="tp-service-area pb-90 z-index">
         <div className="container">
           <div className="row">
             <div className="col-xl-12">
@@ -166,7 +166,7 @@ const ServiceArea = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

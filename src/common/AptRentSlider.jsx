@@ -32,7 +32,6 @@ const ApartmentRentSlider = () => {
   useEffect(() => {
     const fetchData = async () => {
       const query = ` *[_type == "apartmentUnit" && operation == "rent"]{
-    _id,
     _key,
     slug,
     mainImage,
