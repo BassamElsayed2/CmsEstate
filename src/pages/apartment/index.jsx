@@ -2,11 +2,14 @@ import SEO from "@/src/common/seo";
 import FooterThree from "@/src/layout/footers/footer-3";
 import React, { useState, useEffect } from "react";
 import HeaderThree from "@/src/layout/headers/header-3";
-import ApartmentCard from "./ApartmentCard"; // مكون لعرض العقارات
+
 import { client } from "@/src/sanity/lib/client";
-import FilterBar from "./Filter";
+
 import { useRouter, useSearchParams } from "next/navigation";
-import Suggestedresults from "./Suggestedresults";
+
+import ApartmentCard from "@/src/common/ApartmentCard";
+import FilterBar from "@/src/common/Filter";
+import Suggestedresults from "@/src/common/Suggestedresults";
 
 function Apartment() {
   const router = useRouter();
