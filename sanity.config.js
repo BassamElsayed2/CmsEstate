@@ -12,10 +12,11 @@ import { structureTool } from "sanity/structure";
 import { apiVersion, dataset, projectId } from "./src/sanity/env";
 import { schema } from "./src/sanity/schemaTypes";
 import { structure } from "./src/sanity/structure";
+import { markdownSchema } from "sanity-plugin-markdown";
 
 export default defineConfig({
   basePath: "/studio",
-  projectId: "tddwyho0",
+  projectId: "pyd210oc",
   dataset: "production",
   projectUrl: "https://cmsadmin.ens.eg/studio",
   // Add and edit the content schema in the './sanity/schemaTypes' folder
@@ -25,5 +26,6 @@ export default defineConfig({
     // Vision is for querying with GROQ from inside the Studio
     // https://www.sanity.io/docs/the-vision-plugin
     visionTool({ defaultApiVersion: apiVersion }),
+    markdownSchema(),
   ],
 });

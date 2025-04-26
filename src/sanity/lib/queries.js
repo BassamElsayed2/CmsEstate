@@ -14,7 +14,8 @@ export const galleryFetch = `*[_type == "gallery"][0]`;
 
 export const testimonialFetch = `*[_type == "testimonial"][0]`;
 
-export const serviceFetch = `*[_type == "service"][0]`;
+export const apartmentSalesFetch = `*[_type == "apartmentUnit"]`;
+export const featuresFetch = `*[_type == "featuresSection"][0]`;
 
 // export const faqFetch = `*[_type == "faq"][0]`;
 

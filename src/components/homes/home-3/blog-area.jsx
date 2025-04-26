@@ -76,7 +76,7 @@ const BlogArea = () => {
                       </Link>
                     </div>
                     <div className="tp-blog-author-info-box d-flex align-items-center">
-                      <div className="tp-blog-avata">
+                      <div className="tp-blog-avata ">
                         <img
                           src={
                             item?.author_img?.asset?._ref

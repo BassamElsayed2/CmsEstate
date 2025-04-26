@@ -6,8 +6,8 @@ import { useRouter } from "next/router";
 const NavMenu = ({ links }) => {
   const { locale } = useRouter();
 
-  const visibleLinks = links?.slice(0, 4);
-  const remainingLinks = links?.slice(4);
+  const visibleLinks = links?.slice(0, 3);
+  const remainingLinks = links?.slice(3);
 
   return (
     <ul>

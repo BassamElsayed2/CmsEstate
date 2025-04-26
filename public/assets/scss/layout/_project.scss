@@ -439,3 +439,110 @@
   line-height: 1.5em;
   max-height: 3em;
 }
+
+.apartment-gallery {
+  max-width: 1300px;
+  margin: 0 auto !important;
+  .main-image {
+    img {
+      max-height: 500px;
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  .thumbnails {
+    .thumb {
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border 0.3s ease;
+
+      &.active {
+        border-color: #0d6efd; // Bootstrap primary
+      }
+
+      &:hover {
+        border-color: #0d6efd;
+      }
+    }
+  }
+}
+a {
+  text-decoration: none !important;
+}
+ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.aptInfo {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.aptDetails {
+  max-width: 900px;
+}
+@media (max-width: 990px) {
+  .aptDetails {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+.fees {
+  background-color: #0080003b;
+  padding: 5px;
+  border-radius: 10px;
+  color: green;
+  font-size: 16px;
+}
+
+.fees p {
+  font-weight: bold;
+  color: green;
+  margin-bottom: 0;
+}
+
+.cardInfo {
+  border: 1px solid #ddd;
+  width: 350px;
+  height: 200px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+.avatarInfo {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.avatarInfo img {
+  width: 75px;
+  height: 75px;
+  margin-left: 15px;
+}
+
+.contactInfo {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contactInfo div {
+  width: 20%;
+  background-color: rgba(8, 201, 8, 0.2901960784);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 7px;
+  cursor: pointer;
+}

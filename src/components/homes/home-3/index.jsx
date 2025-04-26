@@ -11,20 +11,20 @@ import RatedArea from "./rated-area";
 import SalesArea from "../../../common/sales-area";
 import ServiceArea from "./service-area";
 import GalleryArea from "./rated-area";
+import HeroSection from "@/src/common/HeroSection";
+import ApartmentSlider from "@/src/common/AptSlider";
+import ApartmentRentSlider from "@/src/common/AptRentSlider";
+import FeatureSection from "@/src/common/IconsCards";
 
 const HomeThree = () => {
   return (
     <>
       <HeaderThree />
-      <HeroArea />
-      <CounterArea />
-      <ServiceArea />
-      <GalleryArea />
-      <CardArea />
-      <SalesArea />
-      <TestimonialArea />
-      <IntegrationArea />
-      <BlogArea />
+      <HeroSection />
+      <ApartmentSlider />
+      <ApartmentRentSlider />
+      <FeatureSection />
+
       <FooterThree />
     </>
   );

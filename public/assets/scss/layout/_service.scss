@@ -1161,3 +1161,70 @@
     transform: rotate(360deg);
   }
 }
+
+// apartment card
+.apartment-card {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    text-align: center;
+  }
+}
+
+// أسهم مخصصة
+.custom-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  background: #fff;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.prev {
+    left: -20px;
+  }
+
+  &.next {
+    right: -20px;
+  }
+
+  &:hover {
+    background: #007bff;
+    color: #fff;
+  }
+}
+
+.slider-header {
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #222;
+  }
+
+  .section-subtitle {
+    color: #555;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}

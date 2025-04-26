@@ -278,7 +278,7 @@
     }
   }
   &__transparent {
-    position: absolute;
+    position: relative;
     left: 0;
     right: 0;
   }
@@ -894,5 +894,5 @@
 }
 
 .header-bottom__logo {
-  max-width: 80px;
+  max-width: 100px;
 }

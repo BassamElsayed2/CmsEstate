@@ -6,29 +6,24 @@ import ctaSection from "./ctaSection";
 import faqSection from "./faqSection";
 import footerSection from "./footerSection";
 import gallerySection from "./gallerySection";
-import heroSection from "./heroSection";
+import heroSchema from "./heroSchema";
 import navMenu from "./navMenu";
 import productSection from "./productSection";
-import quarterSection from "./quarterSection";
 import salesSection from "./salesSection";
 import seo from "./seo";
-import serviceSection from "./serviceSection";
-import TestimonialSection from "./TestimonialSection";
+import aptSales from "./aptSales";
+
+import featureschema from "./featureschema";
+import SallerInfo from "./SallerInfo";
 
 export const schema = {
   types: [
     seo,
     navMenu,
-    heroSection,
-    quarterSection,
-    serviceSection,
-    gallerySection,
-    cardSection,
-    salesSection,
-    TestimonialSection,
-    productSection,
-    blogSection,
-    ctaSection,
+    heroSchema,
+    SallerInfo,
+    aptSales,
+    featureschema,
     contactSection,
     footerSection,
     aboutSection,

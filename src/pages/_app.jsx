@@ -20,7 +20,7 @@ export default function App({ Component, pageProps }) {
 
   useEffect(() => {
     document.documentElement.lang = locale; // تعيين لغة الصفحة
-    document.documentElement.dir = locale === "ar" ? "rtl" : "ltr"; // تغيير الاتجاه
+    document.documentElement.dir = "rtl"; // تغيير الاتجاه
   }, [locale]);
 
   return (
