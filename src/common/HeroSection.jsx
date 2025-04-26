@@ -4,6 +4,7 @@ import { client } from "../sanity/lib/client";
 import { heroFetch } from "../sanity/lib/queries";
 import Image from "next/image";
 import { urlFor } from "../sanity/lib/image";
+import SearchBar from "./SearchBar";
 
 const HeroSection = () => {
   const { locale } = useRouter();
@@ -50,7 +51,8 @@ const HeroSection = () => {
           <h1>{heroData?.headerTitle?.[locale]}</h1>
           <p>{heroData?.paragraph?.[locale]}</p>
         </div>
-        <input type="text" placeholder="ابحث هنا..." className="hero-search" />
+        {/* <input type="text" placeholder="ابحث هنا..." className="hero-search" /> */}
+        <SearchBar />
       </div>
     </section>
   );
