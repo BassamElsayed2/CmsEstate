@@ -22,7 +22,7 @@ import { FaMoneyBills } from "react-icons/fa6";
 import ApartmentSlider from "@/src/common/AptSlider";
 import FooterThree from "@/src/layout/footers/footer-3";
 import Link from "next/link";
-import Suggestedresults from "./Suggestedresults";
+import Suggestedresults from "@/src/common/Suggestedresults";
 
 function ApartmentDetails() {
   const router = useRouter();
