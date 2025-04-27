@@ -78,8 +78,14 @@ const ApartmentRentSlider = () => {
   return (
     <div className="container my-5 pt-100 pb-50">
       <div className="slider-header text-center mb-4">
-        <h2 className="section-title">عقارات للايجار</h2>
-        <p className="section-subtitle">عقارات في افض الاماكن</p>
+        <h2 className="section-title">
+          {locale === "en" ? "Apartments for rent" : "عقارات للايجار"}{" "}
+        </h2>
+        <p className="section-subtitle">
+          {locale === "en"
+            ? "Properties for rent all over Egypt"
+            : "عقارات للايجار في جميع انحاء مصر"}
+        </p>
       </div>
       <Slider {...settings}>
         {aptData?.map((apt) => (

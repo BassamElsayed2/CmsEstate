@@ -10,7 +10,7 @@ import { SlLocationPin } from "react-icons/sl";
 
 function ApartmentCard({ apt }) {
   const locale = useLocale();
-  console.log(apt);
+
   return (
     <div className={`d-flex  mb-4`}>
       <div className={"apartmentCard"}>
@@ -21,11 +21,11 @@ function ApartmentCard({ apt }) {
           />
           <div className={"cardBody"}>
             <h2 className="text-primary">
-              {formatPrice(apt?.price, locale)}{" "}
-              {locale === "en" ? "EGP" : "ج.م"}
-              {apt.operation === "rent" && locale === "en"
-                ? " /mo "
-                : "  شهريا "}
+              {formatPrice(apt?.price, locale)}
+              <span className="mx-1">{locale === "en" ? "EGP" : "ج.م"}</span>
+              {apt.operation === "rent" && (
+                <span>{locale === "en" ? " /mo " : " شهريا "}</span>
+              )}
             </h2>
             <h6>{apt.propertyType}</h6>
             <div className="d-flex justify-content-between pb-20 pt-20">

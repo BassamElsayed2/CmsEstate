@@ -902,7 +902,7 @@
 
   .operation-toggle {
     background-color: #e5e7eb;
-
+    border-radius: 5px !important;
     .btn {
       border: none;
       border-radius: 0;
@@ -913,8 +913,8 @@
       transition: all 0.3s ease;
 
       &.active {
-        background-color: #fff;
-        color: #000;
+        background-color: blue;
+        color: #fff;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
       }
 
@@ -949,4 +949,110 @@
     -ms-border-radius: 10px !important;
     -o-border-radius: 10px !important;
   }
+}
+.room-filter-box {
+  min-width: 320px;
+  z-index: 1000;
+  top: 100%;
+  right: 0;
+
+  .circle-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &.active {
+      background-color: #0d6efd;
+      color: #fff;
+      border-color: #0d6efd;
+    }
+  }
+
+  .btn-outline-primary.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+}
+.filters-group {
+  margin: 10px;
+  justify-content: space-between;
+  .filter-btn {
+    min-width: 200px;
+    border: 2px solid #ddd;
+  }
+
+  .filter-dropdown {
+    min-width: 320px;
+    z-index: 1000;
+    top: 100%;
+    right: 0;
+  }
+
+  .circle-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &.active {
+      background-color: #0d6efd;
+      color: #fff;
+      border-color: #0d6efd;
+    }
+  }
+
+  .btn-outline-primary.active {
+    background-color: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+  }
+}
+.dropBtn {
+  transition: transform 0.3s ease;
+}
+
+.dropBtn.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.dropBtn {
+  color: #767676;
+}
+
+.form-select {
+  appearance: none;
+  background: #ffffff; /* أبيض */
+  border: 1px solid #d1d5db; /* بوردر رمادي خفيف */
+  border-radius: 0.75rem; /* زوايا ناعمة */
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-size: 1rem;
+  color: #374151; /* نص غامق شوي */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* ظل خفيف */
+  transition: all 0.3s ease;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%239CA3AF' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.25rem;
+}
+
+.form-select:focus {
+  outline: none;
+  border-color: #3b82f6; /* لون أزرق لما تعمل فوكس */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3); /* ظل أزرق خفيف مع الفوكس */
 }

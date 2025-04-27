@@ -100,22 +100,24 @@ function ApartmentDetails() {
 
   const gallery = aptDetails?.gallery || [];
 
-  console.log(aptDetails);
   return (
     <>
       <SEO />
       <HeaderThree />
-      <div className="d-flex align-items-center justify-content-start mr-100 pt-30 pb-30 ">
-        <Link href="/" className="fw-bold ml-40">
-          {" < "}العودة للبحث
+      <div className="d-flex align-items-center justify-content-start mr-100 pt-30 pb-30">
+        <Link href={`/${locale}/apartment`} className="fw-bold ml-40">
+          {locale === "en" ? "< Back to Search" : "< العودة للبحث"}
         </Link>
-        {"للبيع:"}
-        <Link href="/" className="ml-5 mr-10">
-          العقارات
+        {locale === "en" ? "For Sale:" : "للبيع:"}
+        <Link href={`/${locale}/apartment`} className="ml-5 mr-10">
+          {locale === "en" ? "Properties" : "العقارات"}
         </Link>
         {">"}
-        <Link href="/" className="mr-5">
-          العودة للبحث
+        <Link
+          href={`/${locale}/apartment?operation=sale&location=%D9%85%D8%B5%D8%B1`}
+          className="mr-5"
+        >
+          {locale === "en" ? "Apartment in egypt" : "شقق مصر"}
         </Link>
       </div>
       <div className="row apartment-gallery">
@@ -167,7 +169,10 @@ function ApartmentDetails() {
             </h2>
             <div className="d-flex align-items-center justify-content-center fees">
               <FaMoneyBills />
-              <p className="mr-5">مقدم {aptDetails?.fees}%</p>
+              <p className="mr-5">
+                {locale === "en" ? "Down Payment " : "مقدم "}
+                {aptDetails?.fees}%
+              </p>
             </div>
           </div>
           <h3>{aptDetails?.location?.[locale]}</h3>
@@ -234,7 +239,9 @@ function ApartmentDetails() {
       <Modal show={showModal} onHide={handleClose} size="lg" centered>
         <Modal.Header>
           <div className="w-100 d-flex justify-content-between align-items-center">
-            <Modal.Title>معرض الصور</Modal.Title>
+            <Modal.Title>
+              {locale === "en" ? "Photo Gallery" : "معرض الصور"}
+            </Modal.Title>
             <button
               type="button"
               className="btn-close ms-3"
@@ -247,11 +254,11 @@ function ApartmentDetails() {
         <Modal.Body>
           <Tabs
             activeKey={key}
-            onSelect={(k) => setKey(k)} // تغيير التاب عند التحديد
+            onSelect={(k) => setKey(k)}
             id="modal-tabs"
             className="mb-3"
           >
-            <Tab eventKey="images" title="الصور">
+            <Tab eventKey="images" title={locale === "en" ? "Photos" : "الصور"}>
               <div className="d-flex flex-wrap gap-3 justify-content-center">
                 {gallery.map((img, index) => (
                   <img
@@ -265,7 +272,7 @@ function ApartmentDetails() {
                 ))}
               </div>
             </Tab>
-            <Tab eventKey="map" title="الخريطة">
+            <Tab eventKey="map" title={locale === "en" ? "Map" : "الخريطة"}>
               <div className="d-flex justify-content-center">
                 <iframe
                   title="Google Map"
@@ -303,18 +310,23 @@ function ApartmentDetails() {
       <Modal show={showContactModal} onHide={handleContactModalClose} centered>
         <Modal.Header closeButton>
           <div className="w-100 d-flex justify-content-between align-items-center">
-            <Modal.Title>تفاصيل التواصل</Modal.Title>
+            <Modal.Title>
+              {locale === "en" ? "Contact Details" : "تفاصيل التواصل"}
+            </Modal.Title>
           </div>
         </Modal.Header>
         <Modal.Body>
           <p>
-            <strong>الاسم:</strong> {aptDetails?.saller?.title?.[locale]}
+            <strong>{locale === "en" ? "Name:" : "الاسم:"}</strong>{" "}
+            {aptDetails?.saller?.title?.[locale]}
           </p>
           <p>
-            <strong>رقم الهاتف:</strong> {aptDetails?.saller?.phone}
+            <strong>{locale === "en" ? "Phone:" : "رقم الهاتف:"}</strong>{" "}
+            {aptDetails?.saller?.phone}
           </p>
           <p>
-            <strong>البريد الإلكتروني:</strong> {aptDetails?.saller?.email}
+            <strong>{locale === "en" ? "Email:" : "البريد الإلكتروني:"}</strong>{" "}
+            {aptDetails?.saller?.email}
           </p>
         </Modal.Body>
       </Modal>

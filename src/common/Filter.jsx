@@ -40,7 +40,9 @@ const FilterBar = ({
     <div className="row g-3 filter-wrapper">
       {/* نوع العملية */}
       <div className="col-lg-2 col-md-4">
-        <label className="form-label">العملية</label>
+        <label className="form-label">
+          {locale === "en" ? "Operation Type" : "العملية"}
+        </label>
         <select
           className="form-select"
           value={searchParams?.operation || "sale"}
@@ -60,7 +62,7 @@ const FilterBar = ({
           type="text"
           className="form-control"
           value={locationInput}
-          placeholder="ابحث عن منطقة"
+          placeholder={locale === "en" ? "Enter area" : "أبحث بالموقع"}
           onChange={(e) => setLocationInput(e.target.value)}
           onKeyDown={(e) => {
             if (e.key === "Enter") {
@@ -80,7 +82,7 @@ const FilterBar = ({
           value={searchParams?.propertyType || ""}
           onChange={(e) => handleChange("propertyType", e.target.value)}
         >
-          <option value="">الكل</option>
+          <option value="">{locale === "en" ? "All" : "الكل"}</option>
           <option value="apartment">
             {locale === "en" ? "Apartment" : "شقة"}
           </option>

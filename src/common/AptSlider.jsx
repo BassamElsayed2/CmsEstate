@@ -55,8 +55,6 @@ const ApartmentSlider = () => {
     fetchData();
   }, []);
 
-  console.log(aptData);
-
   const settings = {
     dots: false,
     infinite: true,
@@ -82,8 +80,14 @@ const ApartmentSlider = () => {
   return (
     <div className="container my-5 pt-100 pb-50">
       <div className="slider-header text-center mb-4">
-        <h2 className="section-title">عقارات للبيع</h2>
-        <p className="section-subtitle">افضل العقارات</p>
+        <h2 className="section-title">
+          {locale === "en" ? "Apartments for sale" : "عقارات للبيع"}{" "}
+        </h2>
+        <p className="section-subtitle">
+          {locale === "en"
+            ? "Real estate for sale in the best locations and at the cheapest prices"
+            : "عقارات للبيع في افضل الاماكن وارخص الاسعار"}{" "}
+        </p>
       </div>
       <Slider {...settings}>
         {aptData?.slice(0, 6).map((apt) => (

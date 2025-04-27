@@ -61,8 +61,6 @@ const FeatureSection = () => {
     fetchData();
   }, []);
 
-  console.log(featuresData);
-
   return (
     <div className="container my-5">
       <div className="feature-section">
