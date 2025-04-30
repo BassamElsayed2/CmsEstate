@@ -931,7 +931,6 @@
     padding-left: 1.5rem;
     background-color: #fff;
     border: 1px solid #ccc;
-    width: 400px;
     &:focus {
       box-shadow: none;
       border-color: #007bff;
@@ -950,6 +949,29 @@
     -o-border-radius: 10px !important;
   }
 }
+
+@media (max-width: 768px) {
+  .filters-group {
+    display: none !important;
+  }
+
+  .operation-toggle {
+    display: none !important;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  input.form-control {
+    width: 100%;
+  }
+
+  .search-bar-container .btn-primary {
+    width: 90px;
+  }
+}
+
 .room-filter-box {
   min-width: 320px;
   z-index: 1000;

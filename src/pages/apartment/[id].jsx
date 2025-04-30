@@ -104,7 +104,7 @@ function ApartmentDetails() {
     <>
       <SEO />
       <HeaderThree />
-      <div className="d-flex align-items-center justify-content-start mr-100 pt-30 pb-30">
+      <div className="d-flex align-items-center justify-content-start mr-20 pt-30 pb-30">
         <Link href={`/${locale}/apartment`} className="fw-bold ml-40">
           {locale === "en" ? "< Back to Search" : "< العودة للبحث"}
         </Link>
@@ -131,7 +131,7 @@ function ApartmentDetails() {
           )}
         </div>
 
-        <div className="col-md-4 thumbnails d-flex flex-md-column flex-row flex-wrap gap-2 mt-3 mt-md-0">
+        <div className="col-md-2 thumbnails d-flex flex-md-column flex-row flex-wrap gap-2 mt-3 mt-md-0">
           {gallery.slice(0, 3).map((img, index) => (
             <img
               key={index}

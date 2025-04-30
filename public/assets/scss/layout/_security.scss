@@ -96,15 +96,28 @@
 
 .feature-section {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap; // للسماح بلف الكروت تلقائياً
   gap: 20px;
+  justify-content: center;
   margin-top: 50px;
 }
 
 .feature-card {
-  width: 22%;
+  flex: 0 1 22%; // يأخذ تقريبًا ربع العرض
   height: 300px;
   perspective: 1000px;
+
+  @media (max-width: 1200px) {
+    flex: 0 1 30%; // 3 كروت في السطر
+  }
+
+  @media (max-width: 992px) {
+    flex: 0 1 45%; // 2 كارت في السطر
+  }
+
+  @media (max-width: 576px) {
+    flex: 0 1 100%; // كارت واحد في السطر
+  }
 }
 
 .feature-card-inner {

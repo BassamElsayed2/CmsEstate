@@ -65,7 +65,7 @@ const FeatureSection = () => {
     <div className="container my-5">
       <div className="feature-section">
         {featuresData?.features.map((feature) => (
-          <div key={feature.id} className="feature-card">
+          <div key={feature._id} className="feature-card">
             <div className="feature-card-inner">
               <div className="feature-card-front">
                 <div className="feature-card-icon ">

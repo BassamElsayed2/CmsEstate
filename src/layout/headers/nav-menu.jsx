@@ -13,7 +13,7 @@ const NavMenu = ({ links }) => {
     <ul>
       {visibleLinks?.map((menu_item, i) => (
         <li key={i}>
-          <Link href={`${locale}${menu_item.url}`}>
+          <Link href={`/${locale}${menu_item.url}`}>
             {menu_item.title?.[locale]}
           </Link>
 

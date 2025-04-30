@@ -31,24 +31,24 @@ function ApartmentCard({ apt }) {
             <div className="d-flex justify-content-between pb-20 pt-20">
               <p className=" text-dark">
                 <TbBedFilled className="mr-10 fs-4" />
-                {apt.bedrooms} {locale === "en" ? "Beds" : "غرف"}
+                {apt.bedrooms}
               </p>
               <p className=" text-dark">
-                <FaLocationDot className="mr-10 fs-4" />
+                <FaLocationDot className="mr-10 fs-5" />
                 {apt.site}
               </p>
               <p className="text-dark">
-                <TbBathFilled className="mr-10 fs-4" />
-                {apt.bathrooms} {locale === "en" ? "Bathrooms" : "حمامات"}
+                <TbBathFilled className="mr-10 fs-5" />
+                {apt.bathrooms}
               </p>
               <p className="text-dark">
-                <PiSquaresFourFill className="mr-10 fs-4" />
+                <PiSquaresFourFill className="mr-10 fs-5" />
                 {apt?.area}
                 {locale === "en" ? "square meter" : "متر مربع"}
               </p>
             </div>
             <h3>
-              <SlLocationPin className="ml-10 fs-4" />
+              <SlLocationPin className="ml-10 fs-5" />
               {apt.location?.[locale]}
             </h3>
           </div>
