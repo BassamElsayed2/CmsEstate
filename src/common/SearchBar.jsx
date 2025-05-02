@@ -21,7 +21,8 @@ const SearchBar = () => {
   const typeMapping = {
     apartment: { en: "Apartment", ar: "شقة" },
     villa: { en: "Villa", ar: "فيلا" },
-    duplex: { en: "Duplex", ar: "دوبلكس" }
+    duplex: { en: "Duplex", ar: "دوبلكس" },
+    land: { en: "Lands", ar: "اراضي" },
   };
 
   const toggleFilter = (filter) => {
@@ -44,7 +45,7 @@ const SearchBar = () => {
 
   const renderRoomsBathText = () => {
     if (selectedRoom && selectedBath) {
-      return locale === "en" 
+      return locale === "en"
         ? `${selectedRoom} Rooms / ${selectedBath} Baths`
         : `${selectedRoom} غرف / ${selectedBath} حمام`;
     }
@@ -62,16 +63,22 @@ const SearchBar = () => {
   };
 
   const renderPriceText = () => {
-    return minPrice && maxPrice 
+    return minPrice && maxPrice
       ? `${minPrice} ${locale === "en" ? "EGP" : "ج.م"} - ${maxPrice} ${locale === "en" ? "EGP" : "ج.م"}`
-      : locale === "en" ? "Price" : "السعر";
+      : locale === "en"
+        ? "Price"
+        : "السعر";
   };
 
   const renderTypeText = () => {
-    const selectedTypeKey = Object.keys(typeMapping).find(key => key === selectedType);
+    const selectedTypeKey = Object.keys(typeMapping).find(
+      (key) => key === selectedType
+    );
     return selectedTypeKey
       ? typeMapping[selectedTypeKey][locale]
-      : locale === "en" ? "Property Type" : "نوع العقار";
+      : locale === "en"
+        ? "Property Type"
+        : "نوع العقار";
   };
 
   return (
@@ -96,7 +103,11 @@ const SearchBar = () => {
           <input
             type="text"
             className="form-control"
-            placeholder={locale === "en" ? "Search location, city or area" : "ابحث عن موقع، مدينة أو منطقة"}
+            placeholder={
+              locale === "en"
+                ? "Search location, city or area"
+                : "ابحث عن موقع، مدينة أو منطقة"
+            }
             value={locationInput}
             onChange={(e) => setLocationInput(e.target.value)}
           />
@@ -114,7 +125,9 @@ const SearchBar = () => {
             onClick={() => toggleFilter("rooms")}
           >
             {renderRoomsBathText()}
-            <span className={`dropBtn ms-2 ${isDropdownOpen && activeFilter === "rooms" ? "rotate-180" : ""}`}>
+            <span
+              className={`dropBtn ms-2 ${isDropdownOpen && activeFilter === "rooms" ? "rotate-180" : ""}`}
+            >
               &#9660;
             </span>
           </button>
@@ -178,7 +191,9 @@ const SearchBar = () => {
             onClick={() => toggleFilter("price")}
           >
             {renderPriceText()}
-            <span className={`dropBtn ms-2 ${isDropdownOpen && activeFilter === "price" ? "rotate-180" : ""}`}>
+            <span
+              className={`dropBtn ms-2 ${isDropdownOpen && activeFilter === "price" ? "rotate-180" : ""}`}
+            >
               &#9660;
             </span>
           </button>
@@ -189,14 +204,18 @@ const SearchBar = () => {
                 <input
                   type="number"
                   className="form-control mb-2"
-                  placeholder={locale === "en" ? "Minimum Price" : "السعر الأدنى"}
+                  placeholder={
+                    locale === "en" ? "Minimum Price" : "السعر الأدنى"
+                  }
                   value={minPrice}
                   onChange={(e) => setMinPrice(e.target.value)}
                 />
                 <input
                   type="number"
                   className="form-control"
-                  placeholder={locale === "en" ? "Maximum Price" : "السعر الأعلى"}
+                  placeholder={
+                    locale === "en" ? "Maximum Price" : "السعر الأعلى"
+                  }
                   value={maxPrice}
                   onChange={(e) => setMaxPrice(e.target.value)}
                 />
@@ -220,7 +239,9 @@ const SearchBar = () => {
             onClick={() => toggleFilter("type")}
           >
             {renderTypeText()}
-            <span className={`dropBtn ms-2 ${isDropdownOpen && activeFilter === "type" ? "rotate-180" : ""}`}>
+            <span
+              className={`dropBtn ms-2 ${isDropdownOpen && activeFilter === "type" ? "rotate-180" : ""}`}
+            >
               &#9660;
             </span>
           </button>

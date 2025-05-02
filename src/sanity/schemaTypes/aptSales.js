@@ -44,13 +44,11 @@ export default defineType({
       name: "bedrooms",
       title: "عدد غرف النوم",
       type: "number",
-      validation: (Rule) => Rule.required().min(0),
     }),
     defineField({
       name: "bathrooms",
       title: "عدد الحمامات",
       type: "number",
-      validation: (Rule) => Rule.required().min(0),
     }),
     defineField({
       name: "area",
@@ -118,6 +116,7 @@ export default defineType({
           { title: "شقة", value: "apartment" },
           { title: "فيلا", value: "villa" },
           { title: "دوبلكس", value: "duplex" },
+          { title: "ارض", value: "land" },
         ],
       },
       validation: (Rule) => Rule.required(),

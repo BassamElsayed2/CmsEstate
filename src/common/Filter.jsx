@@ -44,16 +44,7 @@ const FilterBar = ({
         <h3 className="d-flex d-md-none">
           {locale === "en" ? "Advancde Search" : "بحث متقدم"}
         </h3>
-        {/* <button
-          className="setting-btn d-flex d-md-none"
-          onClick={() => setShowMobileFilters(!showMobileFilters)}
-          aria-expanded={showMobileFilters}
-          aria-controls="filtersCollapse"
-        >
-          <span class="bar bar1"></span>
-          <span class="bar bar2"></span>
-          <span class="bar bar1"></span>
-        </button> */}
+
         <button
           title="filter"
           className="filter d-flex d-md-none"
@@ -123,6 +114,9 @@ const FilterBar = ({
               </option>
               <option value="duplex">
                 {locale === "en" ? "Duplex" : "دوبليكس"}
+              </option>
+              <option value="land">
+                {locale === "en" ? "Lands" : "اراضي"}
               </option>
             </select>
           </div>

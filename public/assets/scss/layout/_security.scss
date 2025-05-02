@@ -100,6 +100,7 @@
   gap: 20px;
   justify-content: center;
   margin-top: 50px;
+  overflow: hidden;
 }
 
 .feature-card {
@@ -163,6 +164,10 @@
 .feature-card-icon {
   font-size: 55px;
   color: #1a73e8;
+}
+.feature-card-icon img {
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .feature-card-title {

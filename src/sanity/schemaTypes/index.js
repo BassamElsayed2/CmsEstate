@@ -8,8 +8,7 @@ import footerSection from "./footerSection";
 import gallerySection from "./gallerySection";
 import heroSchema from "./heroSchema";
 import navMenu from "./navMenu";
-import productSection from "./productSection";
-import salesSection from "./salesSection";
+
 import seo from "./seo";
 import aptSales from "./aptSales";
 
@@ -23,6 +22,7 @@ export const schema = {
     heroSchema,
     SallerInfo,
     aptSales,
+
     featureschema,
     contactSection,
     footerSection,

@@ -76,7 +76,7 @@ const ApartmentSlider = () => {
       },
     ],
   };
-
+  console.log(aptData);
   return (
     <div className="container my-5 pt-100 pb-50">
       <div className="slider-header text-center mb-4">
@@ -111,18 +111,22 @@ const ApartmentSlider = () => {
                   {locale === "en" ? "EGP" : "جنيه"}
                 </p>
                 <div className="d-flex justify-content-between">
-                  <p className=" text-dark">
-                    <TbBedFilled className="mr-5 fs-4" />
-                    {apt.bedrooms} {locale === "en" ? "Beds" : "غرف"}
-                  </p>
+                  {apt.bedrooms && (
+                    <p className=" text-dark">
+                      <TbBedFilled className="mr-5 fs-4" />
+                      {apt.bedrooms} {locale === "en" ? "Beds" : "غرف"}
+                    </p>
+                  )}
                   <p className=" text-dark">
                     <FaLocationDot className="mr-5 fs-4" />
                     {apt.site}
                   </p>
-                  <p className="text-dark">
-                    <TbBathFilled className="mr-5 fs-4" />
-                    {apt.bathrooms} {locale === "en" ? "Bathrooms" : "حمامات"}
-                  </p>
+                  {apt.bathrooms && (
+                    <p className="text-dark">
+                      <TbBathFilled className="mr-5 fs-4" />
+                      {apt.bathrooms} {locale === "en" ? "Bathrooms" : "حمامات"}
+                    </p>
+                  )}
                 </div>
               </div>
             </Link>

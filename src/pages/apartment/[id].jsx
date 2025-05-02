@@ -177,14 +177,19 @@ function ApartmentDetails() {
           </div>
           <h3>{aptDetails?.location?.[locale]}</h3>
           <div className="d-flex justify-content-between pt-20">
-            <p className=" text-dark">
-              <TbBedFilled className="mr-5 fs-4" />
-              {aptDetails?.bedrooms} {locale === "en" ? "Beds" : "غرف"}
-            </p>
-            <p className="text-dark">
-              <TbBathFilled className="mr-5 fs-4" />
-              {aptDetails?.bathrooms} {locale === "en" ? "Bathrooms" : "حمامات"}
-            </p>
+            {aptDetails?.bedrooms && (
+              <p className=" text-dark">
+                <TbBedFilled className="mr-5 fs-4" />
+                {aptDetails?.bedrooms} {locale === "en" ? "Beds" : "غرف"}
+              </p>
+            )}
+            {aptDetails?.bathrooms && (
+              <p className="text-dark">
+                <TbBathFilled className="mr-5 fs-4" />
+                {aptDetails?.bathrooms}{" "}
+                {locale === "en" ? "Bathrooms" : "حمامات"}
+              </p>
+            )}
             <p className="text-dark">
               <PiSquaresFourFill className="mr-5 fs-4" />
               {aptDetails?.area} {locale === "en" ? "square meter" : "متر مربع"}

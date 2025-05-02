@@ -29,18 +29,22 @@ function ApartmentCard({ apt }) {
             </h2>
             <h6>{apt.propertyType}</h6>
             <div className="d-flex justify-content-between pb-20 pt-20">
-              <p className=" text-dark">
-                <TbBedFilled className="mr-10 fs-4" />
-                {apt.bedrooms}
-              </p>
+              {apt.bedrooms && (
+                <p className=" text-dark">
+                  <TbBedFilled className="mr-10 fs-4" />
+                  {apt.bedrooms}
+                </p>
+              )}
               <p className=" text-dark">
                 <FaLocationDot className="mr-10 fs-5" />
                 {apt.site}
               </p>
-              <p className="text-dark">
-                <TbBathFilled className="mr-10 fs-5" />
-                {apt.bathrooms}
-              </p>
+              {apt.bathrooms && (
+                <p className="text-dark">
+                  <TbBathFilled className="mr-10 fs-5" />
+                  {apt.bathrooms}
+                </p>
+              )}
               <p className="text-dark">
                 <PiSquaresFourFill className="mr-10 fs-5" />
                 {apt?.area}

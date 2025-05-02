@@ -299,7 +299,7 @@ const FooterThree = () => {
                     data-wow-delay=".9s"
                   >
                     <div className="tp-footer__widget footer-widget-3 footer-col-3-4">
-                      <h4 className="tp-footer__widget-title">
+                      {/* <h4 className="tp-footer__widget-title">
                         {locale === "en"
                           ? "Our Newsletter"
                           : "نشرتنا الإخبارية "}
@@ -317,7 +317,7 @@ const FooterThree = () => {
                             <RightArrow />
                           </button>
                         </form>
-                      </div>
+                      </div> */}
                       <div className="tp-footer__social-3">
                         <h4>
                           {locale === "en" ? "Social media" : "وسائل التواصل"}
