@@ -212,12 +212,18 @@ function ApartmentDetails() {
                 <h2>{aptDetails?.saller?.title?.[locale]}</h2>
               </div>
               <div className="contactInfo">
-                <div onClick={handleContactModalOpen}>
+                <a
+                  href={`https://wa.me/${aptDetails?.saller?.phone}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <TbBrandWhatsappFilled />
-                </div>
-                <div onClick={handleContactModalOpen}>
+                </a>
+
+                <a href="tel:201001234567">
                   <TbPhoneFilled />
-                </div>
+                </a>
+
                 <div onClick={handleContactModalOpen}>
                   <TbMailFilled />
                 </div>

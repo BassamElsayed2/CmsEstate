@@ -538,7 +538,8 @@ ul {
   margin-top: 30px;
 }
 
-.contactInfo div {
+.contactInfo div,
+.contactInfo a {
   width: 20%;
   background-color: rgba(8, 201, 8, 0.2901960784);
   align-items: center;
@@ -548,4 +549,5 @@ ul {
   border-radius: 10px;
   padding: 7px;
   cursor: pointer;
+  color: black;
 }

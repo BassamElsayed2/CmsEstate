@@ -76,7 +76,7 @@ const ApartmentSlider = () => {
       },
     ],
   };
-  console.log(aptData);
+
   return (
     <div className="container my-5 pt-100 pb-50">
       <div className="slider-header text-center mb-4">
